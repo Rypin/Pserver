@@ -3,7 +3,7 @@
 import http.server
 import socketserver
 import os
-Port = int(os.environ('PORT', 8080))
+Port = int(os.environ.get('PORT', 5000))
 Handler = http.server.SimpleHTTPRequestHandler
 Webdir = os.path.dirname(os.path.realpath(__file__))
 os.chdir(Webdir)
